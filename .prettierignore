@@ -1,8 +1,12 @@
+# IDE
+.idea/
+
 # Hugo
 src/.hugo_build.lock
 
 # Npm
 node_modules/
+package-lock.json
 
 # Build
 public/
