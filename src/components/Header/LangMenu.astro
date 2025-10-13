@@ -1,0 +1,47 @@
+---
+// {{ define "getFlag" }}
+//   {{ $flags := .page.Site.Data.languageFlags }}
+//
+//   {{ range where $flags "lang" .code }}
+//     {{ $path := printf "flag-icons/flags/4x3/%s" .flag }}
+//     {{ $file := resources.Get $path }}
+//     {{ $file.Content | safeHTML }}
+//   {{ end }}
+// {{ end }}
+---
+
+<div class="relative">
+  <button
+    class="flex items-center gap-2 rounded-full border-2 border-solid border-yellow-500 px-5 py-2.5 font-semibold text-white duration-150 hover:bg-yellow-500 active:border-yellow-600 active:bg-yellow-600"
+    id="languageMenuButton"
+  >
+    <div class="w-5">
+      <!--template "getFlag" (dict "code" .Site.Language.LanguageCode "page" .)-->
+    </div>
+
+    <!--.Site.Language.LanguageName-->
+
+    <div class="w-6">
+      <!--partial "icons/caret-down.svg" -->
+    </div>
+  </button>
+
+  <ul
+    class="absolute right-0 mt-5 hidden overflow-hidden rounded-lg bg-white text-black"
+    id="languageMenu"
+  >
+    {
+      ["pl", "en"].map((lang) => (
+        <li>
+          <a
+            class="flex items-center gap-2 px-5 py-2.5 duration-150 hover:bg-neutral-300"
+            href=".RelPermalink"
+          >
+            <div class="w-6 overflow-hidden rounded-sm shadow">getFlag</div>
+            Language.LanguageName
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

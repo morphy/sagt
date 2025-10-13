@@ -1,0 +1,36 @@
+---
+import { clsx } from "clsx";
+---
+
+<nav>
+  <ul class="flex gap-8">
+    {
+      [
+        "Home",
+        "O nas",
+        "Stypendium",
+        "Mentoring",
+        "Spotkania",
+        "Wesprzyj nas"
+      ].map((menuItem, index) => {
+        const isActive = index === 0;
+
+        const classes = clsx(
+          ["font-medium", "duration-150", "hover:text-yellow-500"],
+          {
+            "text-yellow-500": isActive,
+            "text-white": !isActive
+          }
+        );
+
+        return (
+          <li>
+            <a href="" aria-current="false" class={classes}>
+              {menuItem}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

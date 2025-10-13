@@ -1,0 +1,35 @@
+---
+import H1 from "@components/H1.astro";
+---
+
+<div>
+  <H1>Napisz do nas</H1>
+
+  <form class="grid grid-cols-2 gap-5" action="">
+    <div class="relative col-span-1">
+      <input type="text" placeholder="Imię" id="name" name="name" />
+
+      <label for="name">Imię</label>
+    </div>
+
+    <div class="relative col-span-1">
+      <input type="text" placeholder="E-mail" id="email" name="email" />
+
+      <label for="email">E-mail</label>
+    </div>
+
+    <div class="relative col-span-2">
+      <textarea placeholder="Wiadomość" id="message" name="message" rows="5"
+      ></textarea>
+
+      <label for="message">Wiadomość</label>
+    </div>
+
+    <button
+      type="submit"
+      class="col-span-2 inline-block rounded-full bg-yellow-500 px-5 py-2.5 text-center font-semibold text-white duration-150 hover:bg-slate-900 active:bg-slate-700"
+    >
+      Wyślij
+    </button>
+  </form>
+</div>

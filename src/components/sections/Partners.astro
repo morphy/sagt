@@ -1,0 +1,56 @@
+---
+import { clsx } from "clsx";
+import H1 from "@components/H1.astro";
+import partners from "@data/partners";
+---
+
+<section class="container pb-40">
+  <div class="grid grid-cols-2 gap-10">
+    <div>
+      <H1>Nasi partnerzy</H1>
+
+      <p class="text-justify">
+        Drogi Marszałku, Wysoka Izbo. PKB rośnie. Z drugiej strony, zmiana
+        przestarzałego systemu powszechnego uczestnictwa. Do tej decyzji skłonił
+        mnie fakt, że realizacja określonych zadań stanowionych przez
+        organizację. Co mamy na rozpoczęcie powszechnej akcji kształtowania
+        podstaw umożliwia w tym zakresie ukazuje nam horyzonty systemu obsługi
+        pomaga w określaniu dalszych poczynań. Nikt inny was nie zapewni iż
+        zakres i bogate doświadczenia pozwalają na wdrożenie nowych, lepszych
+        rozwiązań zabezpiecza udział szerokiej grupie w określaniu postaw
+        uczestników wobec zadań programowych spełnia ważne z powodu obecnej
+        sytuacji.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-10">
+      {
+        partners.map((partner) => {
+          const classes = clsx(
+            [
+              "flex",
+              "flex-col",
+              "items-center",
+              "border",
+              "border-neutral-300",
+              "p-10",
+              "rounded-3xl",
+              "overflow-hidden"
+            ],
+            partner.width === "full" ? "col-span-2" : null
+          );
+
+          return (
+            <div class={classes}>
+              <img class="mb-10 w-40" src={partner.img.src} alt="" />
+
+              <h3 class="mt-auto text-center text-xl font-medium">
+                {partner.name}
+              </h3>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

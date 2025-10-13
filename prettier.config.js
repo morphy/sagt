@@ -1,7 +1,7 @@
 const config = {
   trailingComma: "none",
-  plugins: ["prettier-plugin-toml", "prettier-plugin-go-template"],
   proseWrap: "always",
+  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   overrides: [
     {
       files: ["*.svg", "*.xml"],
@@ -10,12 +10,12 @@ const config = {
       }
     },
     {
-      files: ["*.html"],
+      files: ["*.astro"],
       options: {
-        parser: "go-template"
+        parser: "astro"
       }
     }
   ]
 };
 
-module.exports = config;
+export default config;
