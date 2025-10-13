@@ -13,6 +13,7 @@
     "@tailwindcss/vite": "^4.1.14",
     "astro": "^5.14.1",
     "clsx": "^2.1.1",
+    "flag-icons": "^7.5.0",
     "tailwindcss": "^4.1.14"
   },
   "devDependencies": {

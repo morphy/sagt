@@ -1,13 +1,47 @@
 ---
-// {{ define "getFlag" }}
-//   {{ $flags := .page.Site.Data.languageFlags }}
-//
-//   {{ range where $flags "lang" .code }}
-//     {{ $path := printf "flag-icons/flags/4x3/%s" .flag }}
-//     {{ $file := resources.Get $path }}
-//     {{ $file.Content | safeHTML }}
-//   {{ end }}
-// {{ end }}
+import {
+  getAbsoluteLocaleUrlList,
+  getRelativeLocaleUrl,
+  getRelativeLocaleUrlList,
+  getLocaleByPath,
+  getAbsoluteLocaleUrl
+} from "astro:i18n";
+import CaretDown from "@components/icons/caret-down.svg";
+
+import Pl from "@components/icons/languages/pl.svg";
+import En from "@components/icons/languages/gb.svg";
+import De from "@components/icons/languages/de.svg";
+import Es from "@components/icons/languages/es.svg";
+import { getLocaleRelativeUrl } from "astro/dist/i18n";
+
+const languages = [
+  {
+    code: "pl",
+    name: "Polski",
+    flag: Pl
+  },
+  {
+    code: "en",
+    name: "English",
+    flag: En
+  },
+  {
+    code: "de",
+    name: "Deutsch",
+    flag: De
+  },
+  {
+    code: "es",
+    name: "Español",
+    flag: Es
+  }
+];
+
+const currentLanguage = languages.find(
+  (language) => language.code === Astro.currentLocale
+);
+
+const Flag = currentLanguage?.flag || (() => {});
 ---
 
 <div class="relative">
@@ -16,13 +50,13 @@
     id="languageMenuButton"
   >
     <div class="w-5">
-      <!--template "getFlag" (dict "code" .Site.Language.LanguageCode "page" .)-->
+      <Flag />
     </div>
 
-    <!--.Site.Language.LanguageName-->
+    {currentLanguage?.name}
 
     <div class="w-6">
-      <!--partial "icons/caret-down.svg" -->
+      <CaretDown />
     </div>
   </button>
 
@@ -31,17 +65,57 @@
     id="languageMenu"
   >
     {
-      ["pl", "en"].map((lang) => (
-        <li>
-          <a
-            class="flex items-center gap-2 px-5 py-2.5 duration-150 hover:bg-neutral-300"
-            href=".RelPermalink"
-          >
-            <div class="w-6 overflow-hidden rounded-sm shadow">getFlag</div>
-            Language.LanguageName
-          </a>
-        </li>
-      ))
+      languages.map((language) => {
+        const Flag = language.flag;
+
+        return (
+          <li>
+            <a
+              class="flex items-center gap-2 px-5 py-2.5 duration-150 hover:bg-neutral-300"
+              href={getRelativeLocaleUrl(language.code)}
+            >
+              <div class="w-6 overflow-hidden rounded-sm shadow">
+                <Flag />
+              </div>
+
+              {language.name}
+            </a>
+          </li>
+        );
+      })
     }
   </ul>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("languageMenuButton");
+    const menu = document.getElementById("languageMenu");
+
+    const clickAwayListener = (event) => {
+      console.log("document EL fired");
+
+      if (!event.composedPath().includes(menu)) {
+        menu.classList.add("hidden");
+      }
+    };
+
+    button.addEventListener("click", (event) => {
+      const isHidden = menu.classList.contains("hidden");
+      event.stopPropagation();
+
+      if (isHidden) {
+        menu.classList.remove("hidden");
+
+        console.log("adding document EL");
+        document.addEventListener("click", clickAwayListener, { once: true });
+
+        return;
+      }
+
+      menu.classList.add("hidden");
+      document.removeEventListener("click", clickAwayListener);
+      x();
+    });
+  });
+</script>

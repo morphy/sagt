@@ -1,32 +1,55 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { clsx } from "clsx";
+
+const pages = [
+  {
+    title: "Home",
+    href: ""
+  },
+  {
+    title: "O nas",
+    href: "o-nas"
+  },
+  {
+    title: "Stypendium",
+    href: "stypendium"
+  },
+  {
+    title: "Mentoring",
+    href: "mentoring"
+  },
+  {
+    title: "Spotkania",
+    href: "spotkania"
+  },
+  {
+    title: "Wesprzyj nas",
+    href: "wesprzyj-nas"
+  }
+];
 ---
 
 <nav>
   <ul class="flex gap-8">
     {
-      [
-        "Home",
-        "O nas",
-        "Stypendium",
-        "Mentoring",
-        "Spotkania",
-        "Wesprzyj nas"
-      ].map((menuItem, index) => {
-        const isActive = index === 0;
+      pages.map((page, index) => {
+        const href = getRelativeLocaleUrl(
+          Astro.currentLocale as string,
+          page.href
+        );
+
+        const isActive = href === Astro.url.pathname;
 
         const classes = clsx(
           ["font-medium", "duration-150", "hover:text-yellow-500"],
-          {
-            "text-yellow-500": isActive,
-            "text-white": !isActive
-          }
+          isActive ? "text-yellow-500" : "text-white"
         );
 
         return (
           <li>
-            <a href="" aria-current="false" class={classes}>
-              {menuItem}
+            <a href={href} aria-current="false" class={classes}>
+              {page.title}
             </a>
           </li>
         );

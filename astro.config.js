@@ -9,7 +9,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   i18n: {
-    locales: ["pl", "en", "es", "de"],
+    locales: ["pl", "en", "de", "es"],
     defaultLocale: "pl"
   }
 });
