@@ -1,0 +1,37 @@
+---
+import Hr from "./Hr.astro";
+
+interface Props {
+  img: string;
+  title: string;
+  text: string;
+  href?: string;
+}
+
+const { img, title, text, href } = Astro.props;
+---
+
+<div
+  class="not-prose flex flex-col overflow-hidden rounded-3xl border border-neutral-300"
+>
+  <img src={img} alt="" />
+
+  <div class="flex grow flex-col p-5">
+    <h3 class="mb-2 text-2xl font-medium">{title}</h3>
+
+    <Hr />
+
+    <p class={href && "mb-6"}>{text}</p>
+
+    {
+      href && (
+        <a
+          class="mt-auto ml-auto inline-block rounded-full bg-slate-900 px-5 py-2.5 font-semibold text-white duration-150 hover:bg-yellow-500 active:border-yellow-600 active:bg-yellow-600"
+          href={href}
+        >
+          Więcej
+        </a>
+      )
+    }
+  </div>
+</div>

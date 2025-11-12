@@ -1,0 +1,35 @@
+---
+interface Props {
+  points: {
+    name: string;
+    text: string;
+  }[];
+}
+
+const { points } = Astro.props;
+---
+
+<div class="grid grid-flow-col pb-32">
+  {
+    points.map((point, index, array) => (
+      <div class="relative flex flex-col items-center gap-6">
+        <div class="relative z-10 rounded-full border-3 border-slate-900 bg-white p-2">
+          <div class="size-4 rounded-full bg-yellow-500" />
+        </div>
+
+        {index === 0 ? (
+          <hr class="absolute top-4 left-1/2 w-1/2 border-2 border-slate-900" />
+        ) : index === array.length - 1 ? (
+          <hr class="absolute top-4 left-0 w-1/2 border-2 border-slate-900" />
+        ) : (
+          <hr class="absolute top-4 left-0 w-full border-2 border-slate-900" />
+        )}
+
+        <div class="prose px-8">
+          <h3 class="text-center">{point.name}</h3>
+          <p class="text-center">{point.text}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

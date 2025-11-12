@@ -1,16 +1,18 @@
 ---
-//   // {% include 'sections/hero' %}
-//   //
-//   // {% include 'sections/actions' %}
-//   //
-//   // {% include 'sections/partners' %}
-//   //
-//   // {% include 'sections/donate' %}
 import Layout from "@layouts/Layout.astro";
+import PageHero from "@components/sections/PageHero.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
-<Layout>
-  <div class="prose">
+<Layout title={title}>
+  <PageHero title={title} />
+
+  <section class="container">
     <slot />
-  </div>
+  </section>
 </Layout>

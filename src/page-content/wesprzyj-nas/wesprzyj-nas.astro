@@ -1,0 +1,21 @@
+---
+import BigProse from "@components/BigProse.astro";
+import SmallCards from "@components/SmallCards.astro";
+
+import hands from "./hands.jpg";
+import { Content as MainContent } from "./main.md";
+
+import support from "./support";
+---
+
+<BigProse title="Wesprzyj SAGT">
+  <MainContent slot="text" />
+
+  <img
+    slot="image"
+    class="h-[500px] w-full rounded-3xl border border-neutral-300 object-cover"
+    src={hands.src}
+  />
+</BigProse>
+
+<SmallCards cards={support} cols={3} title="Sposoby wsparcia" />

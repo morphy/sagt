@@ -1,10 +1,12 @@
 ---
-import H1 from "@components/H1.astro";
+import H2 from "@components/H2.astro";
+import Hr from "@components/Hr.astro";
+
 import actions from "@data/actions";
 ---
 
 <section class="container pb-40">
-  <H1>Nasze działania</H1>
+  <H2>Nasze działania</H2>
 
   <div class="grid grid-cols-3 gap-10">
     {
@@ -15,7 +17,7 @@ import actions from "@data/actions";
           <div class="flex grow flex-col p-5">
             <h3 class="mb-2 text-2xl font-medium">{action.name}</h3>
 
-            <hr class="mb-5 w-16 rounded-full border-2 border-yellow-500" />
+            <Hr />
 
             <p class="mb-6">{action.description}</p>
 

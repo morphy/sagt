@@ -1,0 +1,21 @@
+---
+import { clsx } from "clsx";
+
+interface Props {
+  src: string;
+  position: string;
+}
+
+const { src, position } = Astro.props;
+---
+
+<div
+  class={clsx(position, [
+    "overflow-hidden",
+    "rounded-3xl",
+    "border",
+    "border-neutral-300"
+  ])}
+>
+  <img src={src} class="size-full object-cover" />
+</div>

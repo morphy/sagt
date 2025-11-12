@@ -1,0 +1,12 @@
+---
+import { clsx } from "clsx";
+
+interface Props {
+  bg: string;
+  position: string;
+}
+
+const { bg, position } = Astro.props;
+---
+
+<div class={clsx(position, bg, "rounded-3xl")}></div>

@@ -1,0 +1,36 @@
+---
+import { clsx } from "clsx";
+
+import partners from "./partners";
+---
+
+<div class="grid grid-cols-2 gap-10">
+  {
+    partners.map((partner) => (
+      <div
+        class={clsx(
+          [
+            "flex",
+            "flex-col",
+            "items-center",
+            "border",
+            "border-neutral-300",
+            "p-10",
+            "rounded-3xl",
+            "overflow-hidden",
+            "justify-center"
+          ],
+          partner.width === "full" ? "col-span-2" : null
+        )}
+      >
+        <img
+          class={clsx("mb-10", partner.width === "full" ? "w-64" : "h-24")}
+          src={partner.img.src}
+          alt=""
+        />
+
+        <h3 class="text-center text-xl font-medium">{partner.name}</h3>
+      </div>
+    ))
+  }
+</div>

@@ -2,18 +2,13 @@
 import { clsx } from "clsx";
 
 interface Props {
-  align?: "center" | "left";
+  align?: string;
   margin?: string;
+  className?: string;
 }
-const { align = "center", margin = "mb-12" } = Astro.props;
+const { align, margin = "mb-4", className } = Astro.props;
 ---
 
-<h1
-  class={clsx(
-    ["text-4xl", "font-bold"],
-    align === "center" ? "text-center" : null,
-    margin
-  )}
->
+<h1 class={clsx(align, margin, className)}>
   <slot />
 </h1>

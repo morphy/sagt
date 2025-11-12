@@ -1,18 +1,11 @@
 ---
-import {
-  getAbsoluteLocaleUrlList,
-  getRelativeLocaleUrl,
-  getRelativeLocaleUrlList,
-  getLocaleByPath,
-  getAbsoluteLocaleUrl
-} from "astro:i18n";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import CaretDown from "@components/icons/caret-down.svg";
 
 import Pl from "@components/icons/languages/pl.svg";
 import En from "@components/icons/languages/gb.svg";
 import De from "@components/icons/languages/de.svg";
 import Es from "@components/icons/languages/es.svg";
-import { getLocaleRelativeUrl } from "astro/dist/i18n";
 
 const languages = [
   {
@@ -61,7 +54,7 @@ const Flag = currentLanguage?.flag || (() => {});
   </button>
 
   <ul
-    class="absolute right-0 mt-5 hidden overflow-hidden rounded-lg bg-white text-black"
+    class="absolute right-0 mt-5 hidden overflow-hidden rounded-lg border border-neutral-300 bg-white text-black"
     id="languageMenu"
   >
     {
@@ -115,7 +108,6 @@ const Flag = currentLanguage?.flag || (() => {});
 
       menu.classList.add("hidden");
       document.removeEventListener("click", clickAwayListener);
-      x();
     });
   });
 </script>

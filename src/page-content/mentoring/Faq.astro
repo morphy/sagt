@@ -1,0 +1,18 @@
+---
+import { Content as RightContent } from "./right.md";
+import { Content as LeftContent } from "./left.md";
+---
+
+<div class="grid grid-cols-2 gap-10 pb-32">
+  <div class="prose col-span-2">
+    <h1>Pytania i odpowiedzi</h1>
+  </div>
+
+  <div class="prose">
+    <LeftContent />
+  </div>
+
+  <div class="prose">
+    <RightContent />
+  </div>
+</div>

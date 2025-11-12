@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  cards: {
+    title: string;
+    subtitle: string;
+    imgSrc: string;
+    text: any;
+  }[];
+}
+
+const { title, cards } = Astro.props;
+---
+
+<div class="prose max-w-none pb-32">
+  <h1>{title}</h1>
+
+  <div class="flex flex-col gap-10">
+    {
+      cards.map((card) => (
+        <div class="flex justify-center">
+          <div class="flex items-start gap-10">
+            <img
+              class="not-prose aspect-square w-full shrink-0 basis-1/4 rounded-3xl object-cover"
+              src={card.imgSrc}
+              alt=""
+            />
+
+            <div class="prose max-w-none rounded-3xl border border-neutral-300 p-10">
+              <h3>{card.title}</h3>
+              <hr class="mb-4 w-16 rounded-full border-2 border-yellow-500" />
+              <h4>{card.subtitle}</h4>
+              <card.text />
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

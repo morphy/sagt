@@ -1,0 +1,76 @@
+---
+interface Props {
+  events: {
+    date: string;
+    imgSrc: string;
+    title: string;
+    description: string;
+    location: string;
+    href: string;
+    cost: string;
+  }[];
+}
+
+const { events } = Astro.props;
+---
+
+<div class="prose max-w-none pb-32">
+  <h1>Kalendarz wydarzeń</h1>
+
+  <div class="flex flex-col gap-10">
+    {
+      events.map((event) => {
+        const date = new Date(event.date);
+
+        const day = Intl.DateTimeFormat("pl-PL", { day: "2-digit" }).format(
+          date
+        );
+
+        const month = Intl.DateTimeFormat("pl-PL", { month: "short" }).format(
+          date
+        );
+
+        const year = Intl.DateTimeFormat("pl-PL", { year: "numeric" }).format(
+          date
+        );
+
+        return (
+          <div class="grid grid-cols-12 gap-10 rounded-3xl border border-neutral-300 p-10">
+            <div class="col-span-2">
+              <div class="rounded-3xl bg-slate-900 p-5 text-center text-white">
+                <h1 class="mt-0 mb-0 text-white">{day}</h1>
+                <hr class="mx-auto mt-3 mb-3 w-16 rounded-full border-2 border-yellow-500" />
+                <h3 class="mb-0 text-white capitalize">{`${month} ${year}`}</h3>
+              </div>
+            </div>
+
+            <img
+              class="not-prose col-span-4 h-64 w-full rounded-3xl object-cover"
+              src={event.imgSrc}
+            />
+
+            <div class="prose col-span-6">
+              <h2>{event.title}</h2>
+              <hr class="mb-4 w-16 rounded-full border-2 border-yellow-500" />
+              <p>{event.description}</p>
+              <hr class="mt-2 mb-2" />
+              <div class="flex items-end justify-between">
+                <p class="mb-0">
+                  <b>Miejsce:</b> {event.location} <br />
+                  <b>Wejściówka:</b> {event.cost}
+                </p>
+
+                <a
+                  class="inline-block rounded-full bg-slate-900 px-5 py-2.5 font-semibold text-white no-underline duration-150 hover:bg-yellow-500 active:border-yellow-600 active:bg-yellow-600"
+                  href={event.href}
+                >
+                  Więcej
+                </a>
+              </div>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</div>
