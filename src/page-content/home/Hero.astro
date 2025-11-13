@@ -2,23 +2,23 @@
 import Button from "@components/Button.astro";
 import H1 from "@components/H1.astro";
 
-import HomeTop from "@components/paths/home-top.svg";
-import HomeBottom from "@components/paths/home-bottom.svg";
+import HomeTop from "./hero-top.svg";
+import HomeBottom from "./hero-bottom.svg";
 
 import bg1 from "@assets/img/bg1.jpg";
 ---
 
-<section class="relative h-screen">
-  <img class="size-full object-cover" src={bg1.src} alt="" />
+<section class="relative py-52 lg:h-screen">
+  <img class="absolute inset-0 size-full object-cover" src={bg1.src} alt="" />
 
-  <div class="absolute top-0 size-full bg-slate-900/70"></div>
+  <div class="absolute inset-0 size-full bg-slate-900/70"></div>
 
   <HomeTop />
 
   <HomeBottom />
 
-  <div class="absolute top-0 flex size-full items-center">
-    <div class="container grid grid-cols-2 gap-16">
+  <div class="relative flex size-full items-center">
+    <div class="container grid grid-cols-1 gap-16 lg:grid-cols-2">
       <div class="text-white">
         <h3 class="mb-2 font-bold">
           Stowarzyszenie Absolwentów Gdyńskiej Trójki
@@ -38,15 +38,17 @@ import bg1 from "@assets/img/bg1.jpg";
         <Button href="wesprzyj-nas">Wesprzyj nas</Button>
       </div>
 
-      <div class="overflow-hidden rounded-3xl">
-        <iframe
-          class="aspect-video w-full"
-          src="https://www.youtube.com/embed/mDhNQPt8An0?si=LkI2dwN9dVw4evpd"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
+      <div>
+        <div class="overflow-hidden rounded-3xl">
+          <iframe
+            class="aspect-video w-full"
+            src="https://www.youtube.com/embed/mDhNQPt8An0?si=LkI2dwN9dVw4evpd"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>

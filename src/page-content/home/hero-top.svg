@@ -1,5 +1,5 @@
 <svg
-  class="absolute top-0"
+  class="absolute top-22 sm:top-17 md:top-14 lg:top-11 xl:top-8 2xl:top-4"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1440 320"
 >
