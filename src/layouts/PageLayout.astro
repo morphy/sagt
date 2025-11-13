@@ -1,6 +1,6 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import PageHero from "@components/sections/PageHero.astro";
+import BaseLayout from "./BaseLayout.astro";
+import PageHero from "@components/PageHero/PageHero.astro";
 
 interface Props {
   title: string;
@@ -9,10 +9,10 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<Layout title={title}>
+<BaseLayout title={title}>
   <PageHero title={title} />
 
   <section class="container">
     <slot />
   </section>
-</Layout>
+</BaseLayout>

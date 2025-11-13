@@ -1,6 +1,6 @@
 ---
-import "../assets/css/index.css";
-import Header from "@components/Header/Header.astro";
+import "@assets/css/index.css";
+import PageHeader from "@components/PageHeader/PageHeader.astro";
 import Footer from "@components/Footer/Footer.astro";
 
 interface Props {
@@ -16,13 +16,13 @@ const headTitle = title ? `SAGT | ${title}` : "SAGT";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{headTitle}</title>
   </head>
   <body>
-    <Header />
+    <PageHeader />
 
     <slot />
 
