@@ -27,10 +27,13 @@
   --breakpoint-2xl: 1400px;
 
   --font-sans: Montserrat, Calibri, Segoe UI, Arial, sans-serif;
+
+  /*--header-height: 8rem;*/
 }
 
 @utility container {
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 @layer base {
@@ -44,5 +47,9 @@
 
   h3 {
     @apply text-2xl;
+  }
+
+  hr {
+    @apply w-16 rounded-full border-2 border-yellow-500;
   }
 }
