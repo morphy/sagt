@@ -1,0 +1,14 @@
+<section class="container pb-40">
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+    <div>
+      <h2 class="mb-5">{{ .Params.partnersTitle }}</h2>
+      <hr class="mb-10" />
+
+      <p class="text-justify">
+        {{ .Params.partnersText }}
+      </p>
+    </div>
+
+    {{ partial "partners-logo.html" . }}
+  </div>
+</section>

@@ -1,0 +1,59 @@
+<section class="relative py-52 lg:h-screen">
+  {{ with resources.Get .Params.heroImage }}
+
+    <img
+      class="absolute inset-0 size-full object-cover"
+      src="{{ .RelPermalink }}"
+      alt=""
+    />
+  {{ end }}
+
+
+  <div class="absolute inset-0 size-full bg-slate-900/70"></div>
+
+  {{ with resources.Get "svg/paths/home-top.svg" }}
+    {{ .Content | safeHTML }}
+  {{ end }}
+
+  {{ with resources.Get "svg/paths/home-bottom.svg" }}
+    {{ .Content | safeHTML }}
+  {{ end }}
+
+
+  <div class="relative flex size-full items-center">
+    <div class="container grid grid-cols-1 gap-16 lg:grid-cols-2">
+      <div class="text-white">
+        <h3 class="mb-2 font-bold">
+          {{ .Params.heroSubtitle }}
+        </h3>
+
+        <h1 class="mb-4">{{ .Params.heroTitle }}</h1>
+
+        <p class="mb-5 text-justify font-medium">
+          {{ .Params.heroText }}
+        </p>
+
+        {{ partial "button.html" (dict
+          "type" "outline"
+          "href" .Params.heroHref
+          "text" .Params.heroLink
+          )
+        }}
+      </div>
+
+      <div>
+        <div class="overflow-hidden rounded-3xl">
+          <iframe
+            class="aspect-video w-full"
+            src="{{ .Params.heroVideo }}"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

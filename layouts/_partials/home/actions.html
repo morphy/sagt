@@ -1,0 +1,36 @@
+<section class="container pt-10 pb-40 lg:pt-0">
+  <h2 class="mb-5">{{ .Params.actionsTitle }}</h2>
+  <hr class="mb-10" />
+
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+    {{ range .Params.actions }}
+      <div
+        class="flex flex-col overflow-hidden rounded-3xl border border-neutral-300"
+      >
+        {{ with resources.Get .img }}
+          <img
+            src="{{ .RelPermalink }}"
+            class="h-48 object-cover sm:h-64 lg:h-48 xl:h-64"
+            alt=""
+          />
+        {{ end }}
+
+
+        <div class="flex grow flex-col p-5">
+          <h3 class="mb-2 text-2xl font-medium">{{ .title }}</h3>
+
+          <hr class="mb-5" />
+
+          <p class="mb-6">{{ .text }}</p>
+
+          <a
+            class="mt-auto ml-auto inline-block rounded-full bg-slate-900 px-5 py-2.5 font-semibold text-white duration-150 hover:bg-yellow-500 active:border-yellow-600 active:bg-yellow-600"
+            href="{{ .href }}"
+          >
+            Więcej
+          </a>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</section>
