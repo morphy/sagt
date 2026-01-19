@@ -1,0 +1,25 @@
+<div>
+  <h2 class="mb-5">Social media</h2>
+  <hr class="mb-10" />
+
+  <div class="grid grid-cols-3 gap-8 px-0">
+    {{ range .Site.Data.socials }}
+      <div class="flex flex-col items-center">
+        <a
+          class="mb-2 w-12 rounded-full bg-slate-900 p-2 text-white duration-150 hover:bg-yellow-500"
+          href="{{ .href }}"
+        >
+          {{ with resources.Get .icon }}
+            {{ .Content | safeHTML }}
+          {{ end }}
+        </a>
+
+        <p class="text-center">
+          <span class="text-neutral-500">{{ .name }}</span>
+          <br />
+          <a class="hover:underline" href="{{ .href }}">{{ .value }}</a>
+        </p>
+      </div>
+    {{ end }}
+  </div>
+</div>
