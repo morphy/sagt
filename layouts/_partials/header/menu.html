@@ -1,0 +1,61 @@
+{{ $page := .page }}
+{{ $menuID := .menuID }}
+
+{{ with index site.Menus $menuID }}
+  <ul class="flex flex-col gap-8 lg:flex-row">
+    {{ partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </ul>
+{{ end }}
+
+{{ define "_partials/inline/menu/walk.html" }}
+  {{ $page := .page }}
+
+  {{ range .menuEntries }}
+    {{ $classes := slice "font-medium" "duration-150" "hover:text-yellow-500" }}
+    {{ $aria := "" }}
+
+    {{ $attrs := dict "href" .URL }}
+
+    {{ if $page.IsMenuCurrent .Menu . }}
+      {{ $classes = append "text-yellow-500" $classes }}
+      {{ $aria = "page" }}
+    {{ else if $page.HasMenuCurrent .Menu . }}
+      {{ $classes = append "text-yellow-500" $classes }}
+      {{ $aria = "true" }}
+    {{ else }}
+      {{ $classes = append "text-white" $classes }}
+    {{ end }}
+
+    {{ if $aria }}
+      {{ $attrs = merge $attrs (dict "aria-current" $aria) }}
+    {{ end }}
+
+    {{ $attrs = merge $attrs (dict "class" (delimit $classes " ")) }}
+
+    {{ $name := .Name }}
+
+    {{ with .Identifier }}
+      {{ with T . }}
+        {{ $name = . }}
+      {{ end }}
+    {{ end }}
+
+
+    <li>
+      <a
+        {{ range $k, $v := $attrs }}
+          {{ with $v }}
+            {{ printf " %s=%q" $k $v | safeHTMLAttr }}
+          {{ end }}
+        {{ end -}}
+        >{{ $name }}</a
+      >
+
+      {{ with .Children }}
+        <ul>
+          {{ partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+        </ul>
+      {{ end }}
+    </li>
+  {{ end }}
+{{ end }}

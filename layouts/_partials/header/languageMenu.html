@@ -1,0 +1,44 @@
+<div class="relative">
+  <button
+    class="flex cursor-pointer items-center gap-2 rounded-full border-2 border-solid border-yellow-500 px-5 py-2.5 font-semibold text-white duration-150 hover:bg-yellow-500 active:border-yellow-600 active:bg-yellow-600"
+    id="languageMenuButton"
+  >
+    <div class="w-5">
+      {{ with resources.Get (printf "svg/flags/%s.svg" .Language.LanguageCode) }}
+        {{ .Content | safeHTML }}
+      {{ end }}
+    </div>
+
+    {{ .Language.LanguageName }}
+
+
+    <div class="w-6">
+      {{ with resources.Get "svg/icons/caret-down.svg" }}
+        {{ .Content | safeHTML }}
+      {{ end }}
+    </div>
+  </button>
+
+  <ul
+    class="absolute right-0 mt-5 hidden overflow-hidden rounded-lg border border-neutral-300 bg-white text-black"
+    id="languageMenu"
+  >
+    {{ range .Translations }}
+
+      <li>
+        <a
+          class="flex items-center gap-2 px-5 py-2.5 duration-150 hover:bg-neutral-300"
+          href="{{ .RelPermalink }}"
+        >
+          <div class="w-6 overflow-hidden rounded-sm shadow">
+            {{ with resources.Get (printf "svg/flags/%s.svg" .Language.LanguageCode) }}
+              {{ .Content | safeHTML }}
+            {{ end }}
+          </div>
+
+          {{ .Language.LanguageName }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>
