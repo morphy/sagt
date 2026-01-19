@@ -1,0 +1,53 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+
+
+  <section class="container pb-32">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+      <div class="prose">
+        {{ .Content }}
+      </div>
+
+      {{ if .Params.img }}
+        {{ with resources.Get .Params.img }}
+          {{ if eq $.Params.squareImg false }}
+            <img
+              class="w-full rounded-3xl border border-neutral-300 object-cover"
+              src="{{ .RelPermalink }}"
+              alt=""
+            />
+          {{ else }}
+            <img
+              class="aspect-square w-full rounded-3xl border border-neutral-300 object-cover"
+              src="{{ .RelPermalink }}"
+              alt=""
+            />
+          {{ end }}
+        {{ end }}
+      {{ else if .Params.include }}
+        {{ partial .Params.include . }}
+      {{ end }}
+
+    </div>
+  </section>
+
+  {{ if .Params.sections }}
+    {{ range .Params.sections }}
+      <section class="container pb-32">
+        {{ if .title }}
+          <h2 class="mb-5">{{ .title }}</h2>
+          <hr class="mb-10" />
+        {{ end }}
+
+        {{ if templates.Exists (printf "_partials/%s.html" .type) }}
+          {{ partial (printf "%s.html" .type) .data }}
+        {{ else }}
+          <div style="color: red;">
+            Nie ma takiego partiala jak <b>{{ .type }}</b> debilu pierdolony
+          </div>
+        {{ end }}
+      </section>
+    {{ end }}
+  {{ end }}
+
+{{ end }}
