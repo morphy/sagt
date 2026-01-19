@@ -1,0 +1,14 @@
+- name: Facebook
+  value: "@SAGT"
+  icon: svg/icons/facebook-logo.svg
+  href: "https://www.facebook.com/SAGT3LO"
+
+- name: Instagram
+  value: "@SAGT.3LO"
+  icon: svg/icons/instagram-logo.svg
+  href: "https://www.instagram.com/sagt.3lo/"
+
+- name: Facebook
+  value: "@SAGT"
+  icon: svg/icons/linkedin-logo.svg
+  href: "https://www.linkedin.com/company/sagt-stowarzyszenie-absolwentów-gdyńskiej-trójki"
