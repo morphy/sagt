@@ -1,0 +1,57 @@
+{{ $positions := slice
+  "lg:col-span-3 lg:row-span-3 md:col-span-4 md:row-span-3 col-span-12 row-span-12"
+  "lg:col-span-6 lg:row-span-3 md:col-span-8 md:row-span-4 col-span-12 row-span-6"
+  "lg:col-span-3 lg:row-span-4 md:col-span-4 md:row-span-4 col-span-12 row-span-12"
+  "lg:col-span-3 lg:row-span-3 md:col-span-8 md:row-span-3 col-span-12 row-span-12"
+  "lg:col-span-4 lg:row-span-3 md:col-span-6 md:row-span-3 col-span-12 row-span-12"
+  "lg:col-span-2 lg:row-span-1 lg:block hidden"
+  "lg:col-span-5 lg:row-span-3 md:col-span-6 md:row-span-4 col-span-12 row-span-12"
+  "lg:col-span-4 lg:row-span-4 md:col-span-6 md:row-span-4 col-span-12 row-span-12"
+  "lg:col-span-3 lg:row-span-1 lg:block hidden"
+  "lg:col-span-8 lg:row-span-3 md:col-span-6 md:row-span-3 col-span-12 row-span-12"
+  "lg:col-span-8 lg:row-span-3 md:col-span-6 md:row-span-3 col-span-12 row-span-12"
+  "lg:col-span-4 lg:row-span-3 md:col-span-6 md:row-span-3 col-span-12 row-span-12"
+  "lg:col-span-4 lg:row-span-3 md:col-span-6 md:row-span-2 col-span-12 row-span-12"
+  "lg:col-span-4 lg:row-span-3 md:col-span-12 md:row-span-3 col-span-12 row-span-12"
+}}
+
+{{ $images := . }}
+
+
+<div class="not-prose grid grid-cols-12 gap-5 md:grid-rows-[repeat(12,128px)]">
+  {{ range $index, $position := $positions }}
+    {{ if or (eq $index 5) (eq $index 8) }}
+      {{ $bg := "" }}
+
+      {{ if eq $index 5 }}
+        {{ $bg = "bg-yellow-500" }}
+      {{ else }}
+        {{ $bg = "bg-slate-900" }}
+      {{ end }}
+
+      {{ $classes := slice "rounded-3xl" $position $bg }}
+
+
+      <div class="{{ delimit $classes " " }}"></div>
+    {{ else }}
+      {{ with resources.Get (index $images $index) }}
+        {{ $classes := slice
+          "overflow-hidden"
+          "rounded-3xl"
+          "border"
+          "border-neutral-300"
+          $position
+        }}
+
+
+        <div class="{{ delimit $classes " " }}">
+          <img
+            src="{{ .RelPermalink }}"
+            class="size-full object-cover"
+            alt=""
+          />
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</div>

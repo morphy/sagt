@@ -1,0 +1,13 @@
+<div class="grid grid-cols-2 gap-10">
+  <div class="prose">
+    {{ with resources.Get .left }}
+      {{ .Content | markdownify }}
+    {{ end }}
+  </div>
+
+  <div class="prose">
+    {{ with resources.Get .right }}
+      {{ .Content | markdownify }}
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,68 @@
+{{ $background := "" }}
+
+{{ with resources.Get "img/bg2.jpg" }}
+  {{ $background = .RelPermalink }}
+{{ end }}
+
+
+<section
+  class="relative bg-cover bg-center bg-no-repeat"
+  style="background-image: url('{{ $background }}');"
+>
+  {{ with resources.Get "svg/paths/donate-top.svg" }}
+    {{ .Content | safeHTML }}
+  {{ end }}
+
+
+  <div class="container grid grid-cols-6">
+    <div
+      class="col-span-6 my-10 rounded-3xl bg-stone-100/85 p-12 backdrop-blur-sm lg:col-span-4 xl:col-span-3"
+    >
+      <h2 class="mb-3">Wesprzyj nas!</h2>
+      <hr class="mb-5" />
+
+      <p class="mb-5 text-justify">
+        Przyznajemy stypendia dla uczniów, organizujemy cykliczne spotkania oraz
+        oferujemy programy mentoringowe dzięki wsparciu osób takich jak ty!
+      </p>
+
+      <div class="mb-5 flex flex-wrap items-center gap-5">
+        {{ partial "button.html" (dict
+          "type" "blue"
+          "href" "#"
+          "text" "PayPal"
+          "icon" "svg/icons/paypal-logo.svg"
+          )
+        }}
+
+        {{ partial "button.html" (dict
+          "type" "yellow"
+          "href" "#"
+          "text" "1% podatku"
+          )
+        }}
+
+        {{ partial "button.html" (dict
+          "type" "blue"
+          "href" "#"
+          "text" "Przelew"
+          "icon" "svg/icons/bank.svg"
+          )
+        }}
+
+      </div>
+
+      <p>
+        Jeśli chcesz wesprzeć konkretny projekt lub stypendium&nbsp;—&nbsp;<a
+          class="underline"
+          href=""
+          >skontaktuj się z nami</a
+        >!
+      </p>
+    </div>
+  </div>
+
+  {{ with resources.Get "svg/paths/donate-bottom.svg" }}
+    {{ .Content | safeHTML }}
+  {{ end }}
+</section>
