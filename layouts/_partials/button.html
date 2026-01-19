@@ -1,0 +1,20 @@
+{{ $base := "inline-flex items-center gap-2 rounded-full px-5 py-2.5 font-semibold text-white duration-150 no-underline" }}
+
+{{ $types := dict
+  "outline" "border-2 border-solid border-yellow-500 hover:bg-yellow-500 active:border-yellow-600 active:bg-yellow-600"
+  "yellow" "bg-yellow-500 hover:bg-slate-900 active:bg-slate-700"
+  "blue" "bg-slate-900 hover:bg-yellow-500 active:bg-yellow-600"
+}}
+
+
+<a class="{{ printf "%s %s" $base (index $types .type) }}" href="{{ .href }}">
+  {{ if .icon }}
+    <div class="w-5">
+      {{ with resources.Get .icon }}
+        {{ .Content | safeHTML }}
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ .text }}
+</a>

@@ -1,0 +1,21 @@
+<head>
+  <title>
+    {{- if .IsHome -}}
+      {{- .Site.Title | plainify -}}
+    {{- else -}}
+      {{- printf "%s | %s" .Title (.Site.Title | plainify) -}}
+    {{- end -}}
+  </title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {{ hugo.Generator }}
+
+  {{ partial "head/favicon.html" . }}
+
+  {{ with (templates.Defer (dict "key" "global")) }}
+    {{ partial "head/css.html" . }}
+  {{ end }}
+
+  {{ partialCached "head/js.html" . }}
+</head>

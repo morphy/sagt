@@ -1,0 +1,28 @@
+<section class="relative mb-10">
+  {{ with resources.Get "img/bg1.jpg" }}
+    <img
+      class="absolute inset-0 size-full object-cover"
+      src="{{ .RelPermalink }}"
+      alt=""
+    />
+  {{ end }}
+
+
+  <div class="absolute inset-0 bg-slate-900/70"></div>
+
+  {{ with resources.Get "svg/paths/page-top.svg" }}
+    {{ .Content | safeHTML }}
+  {{ end }}
+
+  {{ with resources.Get "svg/paths/page-bottom.svg" }}
+    {{ .Content | safeHTML }}
+  {{ end }}
+
+
+  <div
+    class="relative container pt-44 pb-24 md:pt-52 md:pb-28 lg:pt-52 lg:pb-32 xl:pt-56 xl:pb-36 2xl:pt-64 2xl:pb-48"
+  >
+    <h1 class="mb-5 text-white">{{ .Title }}</h1>
+    <hr />
+  </div>
+</section>

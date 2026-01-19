@@ -1,0 +1,19 @@
+<footer class="relative pt-10 pb-24 sm:pb-36 md:pb-48 xl:pb-40 2xl:pb-60">
+  {{ with resources.Get "svg/paths/footer-bottom.svg" }}
+    {{ .Content | safeHTML }}
+  {{ end }}
+
+
+  <section
+    class="relative container grid grid-cols-1 gap-x-10 gap-y-20 lg:grid-cols-2 lg:gap-y-40"
+  >
+    {{ partial "footer/form.html" . }}
+    {{ partial "footer/contact.html" . }}
+    {{ partial "footer/social.html" . }}
+
+    {{ with resources.Get "svg/paths/map.svg" }}
+      {{ .Content | safeHTML }}
+    {{ end }}
+
+  </section>
+</footer>
