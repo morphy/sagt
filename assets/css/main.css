@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "inputs.css";
+
+@source "hugo_stats.json";
+
 @plugin "@tailwindcss/typography";
 
 @font-face {
@@ -7,7 +11,7 @@
   font-display: swap;
   src:
     local("Montserrat"),
-    url("../fonts/montserrat.ttf") format("truetype");
+    url("/fonts/montserrat.ttf") format("truetype");
 }
 
 @font-face {
@@ -16,7 +20,7 @@
   font-display: swap;
   src:
     local("Montserrat"),
-    url("../fonts/montserrat-italic.ttf") format("truetype");
+    url("/fonts/montserrat-italic.ttf") format("truetype");
 }
 
 @theme {

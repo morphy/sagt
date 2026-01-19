@@ -6,4 +6,4 @@ Stypendium upamiętnia prof. Czesława Poznańskiego — matematyka, "Nauczyciel
 - Wybierany przez grono nauczycieli matematyki w szkole na podstawie
   zeszłorocznych osiągnięć
 - Brana pod wagę jest również aktywność społeczna ucznia
-- Całkowite środki przeznaczone na ten cel: **21 000 zł**
+- Całkowite środki przeznaczone na ten cel: **21&nbsp;000 zł**

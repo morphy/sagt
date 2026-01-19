@@ -1,25 +1,17 @@
 {
-  "type": "module",
   "scripts": {
-    "dev": "astro dev --host",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "cleam": "shx rm -rf node_modules dist .astro",
+    "dev": "shx rm -rf dist && hugo server",
+    "build": "shx rm -rf dist && hugo",
+    "clean": "shx rm -rf node_modules dist .hugo_build.lock",
     "format": "prettier --write --ignore-unknown ."
   },
-  "dependencies": {
-    "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.14",
-    "astro": "^5.14.1",
-    "clsx": "^2.1.1",
-    "flag-icons": "^7.5.0",
-    "tailwindcss": "^4.1.14"
-  },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
     "prettier": "^3.6.2",
-    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-tailwindcss": "^0.6.14",
-    "shx": "^0.4.0"
+    "shx": "^0.4.0",
+    "tailwindcss": "^4.1.18"
   }
 }

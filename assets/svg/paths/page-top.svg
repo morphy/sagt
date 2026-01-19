@@ -1,5 +1,5 @@
 <svg
-  class="absolute top-0 fill-slate-900"
+  class="absolute top-22 fill-slate-900 sm:top-18 md:top-15 lg:top-12 xl:top-9 2xl:top-6"
   viewBox="0 0 1962 178"
   xmlns="http://www.w3.org/2000/svg"
 >

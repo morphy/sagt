@@ -1,21 +1,16 @@
-const config = {
+module.exports = {
   trailingComma: "none",
+  plugins: ["prettier-plugin-go-template", "prettier-plugin-tailwindcss"],
   proseWrap: "always",
-  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+
   overrides: [
     {
       files: ["*.svg", "*.xml"],
-      options: {
-        parser: "html"
-      }
+      options: { parser: "html" }
     },
     {
-      files: ["*.astro"],
-      options: {
-        parser: "astro"
-      }
+      files: ["*.html"],
+      options: { parser: "go-template" }
     }
   ]
 };
-
-export default config;

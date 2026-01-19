@@ -6,4 +6,4 @@ informatyki.
 - Skierowane do uczniów o szczególnych osiągnięciach w dziedzinie informatyki
 - Stypendium przyznawane jest osobom wyróżniającym się aktywnością społeczną i
   naukową
-- Całkowite środki przeznaczone na ten cel: **3 000 zł**
+- Całkowite środki przeznaczone na ten cel: **3&nbsp;000 zł**

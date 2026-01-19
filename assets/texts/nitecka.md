@@ -6,4 +6,4 @@ nauczycieli naszego liceum
 - Stypendium przyznawane jest na podstawie rozmów z dyrekcją oraz na podstawie
   ankiety przeprowadzonej wśród uczniów
 - Zwycięzca otrzymuje tytuł Nauczyciela-Mistrza / Nauczycielki-Mistrzyni
-- Całkowite środki przeznaczone na ten cel: **8 000 zł**
+- Całkowite środki przeznaczone na ten cel: **8&nbsp;000 zł**

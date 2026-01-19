@@ -8,4 +8,4 @@ oraz wychowawcę klas z wykładowym językiem angielskim już w 1963 roku!
   szkole
 - Uwzględniana jest również społeczna aktywność kandydatów, ich wkład w
   pomaganie innym
-- Kwota **3 000 zł** rocznie – **12 000 zł** w sumie
+- Kwota **3&nbsp;000 zł** rocznie – **12&nbsp;000 zł** w sumie

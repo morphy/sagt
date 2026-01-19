@@ -1,6 +1,6 @@
 input,
 textarea {
-  @apply w-full px-6 py-3.5 border-2 border-neutral-200 rounded-full duration-150 hover:border-black focus:border-black placeholder:opacity-0;
+  @apply w-full rounded-full border-2 border-neutral-200 px-6 py-3.5 duration-150 placeholder:opacity-0 hover:border-black focus:border-black;
 }
 
 textarea {
@@ -8,7 +8,7 @@ textarea {
 }
 
 label {
-  @apply absolute top-0 left-0 pointer-events-none duration-150 bg-white px-1 text-neutral-600;
+  @apply pointer-events-none absolute top-0 left-0 bg-white px-1 text-neutral-600 duration-150;
   transform: translate(19px, 14px);
 }
 
