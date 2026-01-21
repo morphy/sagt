@@ -1,6 +1,6 @@
 ---
 title: Stypendium
-include: partners-logo.html
+include: partner-logos.html
 
 menus:
   main:

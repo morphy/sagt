@@ -3,20 +3,10 @@
 
     {{ $imgClass := "" }}
 
-    {{ $classes := slice
-      "flex"
-      "flex-col"
-      "items-center"
-      "border"
-      "border-neutral-300"
-      "p-10"
-      "rounded-3xl"
-      "overflow-hidden"
-      "justify-center"
-    }}
+    {{ $classes := slice "flex flex-col gap-6 items-center border border-neutral-300 p-10 rounded-3xl overflow-hidden justify-center" }}
 
     {{ if eq .width "full" }}
-      {{ $classes = append "xl:col-span-2" "col-span-1" $classes }}
+      {{ $classes = append "xl:col-span-2 col-span-1" $classes }}
       {{ $imgClass = "w-64" }}
     {{ else }}
       {{ $imgClass = "h-24" }}
@@ -29,7 +19,13 @@
       {{ end }}
 
 
-      <h3 class="text-center text-xl font-medium">{{ .name }}</h3>
+      <a href="{{ .href }}">
+        <h3
+          class="text-center text-xl font-medium duration-200 hover:text-yellow-500"
+        >
+          {{ .name }}
+        </h3>
+      </a>
     </div>
   {{ end }}
 
