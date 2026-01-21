@@ -1,11 +1,12 @@
-- name: III LO w Gdyni
-  img: img/partners/iiilo.png
-  width: half
+- img: img/partners/iiilo.png
+  name: III LO w Gdyni
+  href: https://www.lo3.gdynia.pl/
 
-- name: Seattle-Gdynia Sister City Association
-  img: img/partners/sgsca.png
-  width: half
+- img: img/partners/sgsca.png
+  name: Seattle-Gdynia Sister City Association
+  href: https://www.seattlegdynia.org/
 
-- name: Handsontable
-  img: img/partners/handsontable.png
+- img: img/partners/handsontable.png
+  href: https://handsontable.com/
+  name: Handsontable
   width: full
