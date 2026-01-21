@@ -16,7 +16,7 @@ heroText:
   szkołę oferując wsparcie finansowe, stypendia oraz mentoring.
 heroLink: Wesprzyj nas
 heroHref: wesprzyj-nas
-heroVideo: https://www.youtube.com/embed/mDhNQPt8An0?si=LkI2dwN9dVw4evpd
+heroVideo: https://www.youtube.com/embed/4nKgQytEcWE?si=2cDr2nTb0kPXZTKk
 
 actionsTitle: Nasze działania
 actions:
@@ -43,13 +43,12 @@ actions:
 
 partnersTitle: Nasi Partnerzy
 partnersText:
-  Drogi Marszałku, Wysoka Izbo. PKB rośnie. Z drugiej strony, zmiana
-  przestarzałego systemu powszechnego uczestnictwa. Do tej decyzji skłonił mnie
-  fakt, że realizacja określonych zadań stanowionych przez organizację. Co mamy
-  na rozpoczęcie powszechnej akcji kształtowania podstaw umożliwia w tym
-  zakresie ukazuje nam horyzonty systemu obsługi pomaga w określaniu dalszych
-  poczynań. Nikt inny was nie zapewni iż zakres i bogate doświadczenia pozwalają
-  na wdrożenie nowych, lepszych rozwiązań zabezpiecza udział szerokiej grupie w
-  określaniu postaw uczestników wobec zadań programowych spełnia ważne z powodu
-  obecnej sytuacji.
+  Nasza działalność byłaby niemożliwa bez wsparcia finansowego i organizacyjnego
+  naszych partnerów. To właśnie dzięki ich działalności możemy kontynuować naszą
+  misję w obszarze przyznawania stypendiów, organizowania spotkań absolwentów,
+  wspierania działalności szkolnej oraz pozaszkolnej uczniów. Jesteśmy wdzięczni
+  wszystkim instytucjom, firmom i osobom prywatnym, które angażują się w rozwój
+  naszej społeczności. Ich zaangażowanie pozwala nam realizować inicjatywy
+  edukacyjne, rozwijać pasje młodzieży i budować mosty między kolejnymi
+  pokoleniami uczniów i absolwentów.
 ---
