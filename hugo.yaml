@@ -15,37 +15,6 @@ languages:
     languageName: English
     languageCode: en
     weight: 20
-  de:
-    contentDir: content/de
-    languageName: Deutsch
-    languageCode: de
-    weight: 30
-  es:
-    contentDir: content/es
-    languageName: Español
-    languageCode: es
-    weight: 40
-
-menus:
-#  main:
-#    - name: Home
-#      pageRef: "/"
-#      weight: 10
-#    - name: O nas
-#      pageRef: "/o-nas"
-#      weight: 20
-#    - name: Stypendium
-#      pageRef: "/stypendium"
-#      weight: 30
-#    - name: Mentoring
-#      pageRef: "/mentoring"
-#      weight: 40
-#    - name: Spotkania
-#      pageRef: "/spotkania"
-#      weight: 50
-#    - name: Wesprzyj nas
-#      pageRef: "/wesprzyj-nas"
-#      weight: 60
 
 build:
   buildStats:
