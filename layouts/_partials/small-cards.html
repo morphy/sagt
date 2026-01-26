@@ -1,21 +1,28 @@
 {{ $classes := "" }}
+{{ $columns := .data.columns }}
+
+{{ $cards := slice dict }}
+
+{{ with .ctx.Resources.Get .data.file }}
+  {{ $cards = unmarshal .Content }}
+{{ end }}
 
 
 <!-- Grid -->
 
-{{ if or (eq .columns 4) (not .columns) }}
+{{ if or (eq $columns 4) (not $columns) }}
   {{ $classes = "grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" }}
-{{ else if eq .columns 2 }}
+{{ else if eq $columns 2 }}
   {{ $classes = "grid grid-cols-1 gap-10 md:grid-cols-2" }}
-{{ else if eq .columns 3 }}
+{{ else if eq $columns 3 }}
   {{ $classes = "grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3" }}
 {{ end }}
 
 
 <!-- Cta width -->
 
-{{ $gridWidth := (default 4 .columns) }}
-{{ $mod := mod (len (where .cards "cta" "!=" true)) $gridWidth }}
+{{ $gridWidth := (default 4 $columns) }}
+{{ $mod := mod (len (where $cards "cta" "!=" true)) $gridWidth }}
 
 {{ $freeSpace := 0 }}
 
@@ -42,20 +49,20 @@
 {{ $textAlign := "text-justify" }}
 
 {{ if .shortText }}
-  {{/* {{ $ctaWidth = "sm:col-span-full" }}*/}}
   {{ $verticalAlign = "justify-center" }}
   {{ $textAlign = "text-center" }}
 {{ end }}
 
 
 <div class="{{ $classes }}">
-  {{ range .cards }}
+  {{ range $cards }}
     {{ if not .cta }}
       <div
-        class="prose {{ $verticalAlign }} flex max-w-none flex-col items-center rounded-3xl border border-neutral-300 p-10"
+        class="prose {{ $verticalAlign }} flex max-w-none flex-col rounded-3xl border border-neutral-300 p-10 text-center"
       >
         <h3>{{ .title }}</h3>
-        <hr class="mb-4 w-16 rounded-full border-2 border-yellow-500" />
+
+        <hr class="mx-auto mb-4 w-16 rounded-full border-2 border-yellow-500" />
 
         {{ if .subtitle }}
           <h4>{{ .subtitle }}</h4>

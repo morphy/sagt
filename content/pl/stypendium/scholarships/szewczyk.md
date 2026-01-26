@@ -1,3 +1,11 @@
+---
+img: img/scholarships/szewczyk.jpg
+---
+
+### Nagroda im. prof. Dantuy Szewczyk
+
+---
+
 Stypendium upamiętnia prof. Danutę Szewczyk — anglistkę, twórczynię programu
 oraz wychowawcę klas z wykładowym językiem angielskim już w 1963 roku!
 

@@ -1,3 +1,11 @@
+---
+img: img/scholarships/jednorazowa.jpg
+---
+
+### Jednorazowa Nagroda Specjalna
+
+---
+
 Stypendium ufundowane w 2021 r. przeznaczone dla uczniów wyróżniających się
 aktywnością społeczną i naukową. Nagrodę ufundowała Pani Ewelina Mazur.
 

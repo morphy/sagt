@@ -1,0 +1,21 @@
+- img: img/gallery/gallery-08.jpg
+  title: Lorem ipsum dolor
+  text:
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et.
+  date: 2025-10-14
+  location: Gdynia
+  cost: 200 zł
+  href: "#"
+
+- img: img/gallery/gallery-09.jpg
+  title: Sit am expoli
+  text:
+    Sabore et dolore magna aliquyam erat, sed diam voluptua. Consetetur
+    sadipscing elitr, sed diamLorem ipsum dolor sit amet, tempor invidunt ut
+    labore et dolore magna aliquyam erat, sed diam voluptua.
+  date: 2026-05-02
+  location: Gdynia
+  cost: 200 zł
+  href: "#"

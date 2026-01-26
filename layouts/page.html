@@ -31,6 +31,15 @@
     </div>
   </section>
 
+  {{ $sectionsWithContext := (slice
+    "faq"
+    "large-cards"
+    "small-cards"
+    "timeline"
+    "calendar"
+    )
+  }}
+
   {{ if .Params.sections }}
     {{ range .Params.sections }}
       <section class="container pb-32">
@@ -40,11 +49,11 @@
         {{ end }}
 
         {{ if templates.Exists (printf "_partials/%s.html" .type) }}
-          {{ partial (printf "%s.html" .type) .data }}
-        {{ else }}
-          <div style="color: red;">
-            Nie ma takiego partiala jak <b>{{ .type }}</b> debilu pierdolony
-          </div>
+          {{ if in $sectionsWithContext .type }}
+            {{ partial (printf "%s.html" .type) (dict "ctx" $ "data" .data) }}
+          {{ else }}
+            {{ partial (printf "%s.html" .type) .data }}
+          {{ end }}
         {{ end }}
       </section>
     {{ end }}

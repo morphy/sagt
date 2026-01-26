@@ -1,0 +1,53 @@
+- title: Zuzanna Ossowska
+  subtitle: Stypendystka SGSCA i SAGT z 2021 roku
+  text:
+    Zuzanna jest najlepszą informatyczką w szkole, kilkukrotną laureatką
+    olimpiad matematycznych oraz informatycznych, w tym m.in. złotą medalistką I
+    Europejskiej Olimpiady Informatycznej Dziewcząt w Zurychu.
+
+- title: Michał Sajkowski
+  subtitle: Stypendysta z 2020 roku
+  text:
+    Aspirujący matematyk, zainteresowany topologią ogólną, geometrią fraktalną,
+    układami dynamicznymi oraz matematyczną teorią chaosu. Miłośnik planimetrii,
+    pasjonat literatury i fenomenolog–amator.
+
+- title: Julia Gajewska
+  subtitle: Stypendystka z 2020r
+  text:
+    Finalistka Olimpiady j. angielskiego. Obecnie studiuje matematykę oraz
+    informatykę na New York University Abu Dhabi. Do jej zainteresowań należy
+    muzyka, literatura oraz nauka języków obcych.
+
+- title: Mateusz Szarmach
+  subtitle: Stypendysta z 2019 roku
+  text:
+    Srebrny medalista Środkowoeuropejskiej Olimpiady Matematycznej, laureat
+    Olimpiady Matematycznej, brązowy medalista Konkursu prac uczniowskich.
+    Mateusz interesuje się także informatyką.
+
+- title: Michał Umiński
+  subtitle: Stypendysta z 2018 roku
+  text:
+    Srebrny medalista na Środkowoeuropejskiej Olimpiadzie Matematycznej, laureat
+    Olimpiady Matematycznej, brązowy medalista Konkursu prac uczniowskich. Do
+    zainteresowań Mateusza należy także informatyka.
+
+- title: Piotr Kowalewski
+  subtitle: Pierwszy stypendysta SAGT, z 2017
+  text: >-
+    Obecnie studiuje informatykę na UW. Piotr interesuje się informatyką,
+    matematyką oraz ekonomią. Do jego najciekawszych osiągnięć należą: srebrny
+    medal IATI, brązowy medal BOI, dwukrotny laureat OM oraz czterokrotny OI.
+
+- title: Oliwer Wirkus
+  subtitle: Stypendysta SGSCA I SAGT z 2021 roku
+  text:
+    Oliwer jest pasjonatem ekonomii oraz srebrnym medalistą zeszłorocznej
+    Międzynarodowej Olimpiady Ekonomiczne.
+
+- cta: true
+  title: Chcesz otrzymać stypendium?
+  text: Zgłoś się do programu stypendialnego!
+  link: Napisz do nas
+  href: link.pl

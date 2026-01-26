@@ -1,3 +1,11 @@
+---
+img: img/scholarships/handsontable.jpg
+---
+
+### Stypendium Handsontable i SAGT
+
+---
+
 Stypendium ufundowane w 2023 r. przez firmę Handsontable przeznaczone dla
 uczniów wyróżniających się aktywnością społeczną i naukową w dziedzinie
 informatyki.

@@ -1,5 +1,10 @@
-{{ $points := . }}
-{{ $length := len . }}
+{{ $points := slice }}
+
+{{ with .ctx.Resources.Get .data }}
+  {{ $points = unmarshal .Content }}
+{{ end }}
+
+{{ $length := len $points }}
 
 
 <div class="flex flex-col justify-center lg:flex-row">

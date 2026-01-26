@@ -1,3 +1,11 @@
+---
+img: img/scholarships/nitecka.jpg
+---
+
+### Nagroda im. prof. Doroty Niteckiej
+
+---
+
 Nagroda ufundowana w 2023 r. przez Pana Igora Pogorzelskiego przeznaczona dla
 nauczycieli naszego liceum
 

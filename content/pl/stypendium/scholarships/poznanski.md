@@ -1,3 +1,11 @@
+---
+img: img/scholarships/poznanski.jpg
+---
+
+### Stypendium im. Czesława Poznańskiego
+
+---
+
 Stypendium upamiętnia prof. Czesława Poznańskiego — matematyka, "Nauczyciela
 60-lecia" III Liceum Ogólnokształcącego w Gdyni
 

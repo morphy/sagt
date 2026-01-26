@@ -1,3 +1,11 @@
+---
+img: img/scholarships/sgsca.jpg
+---
+
+### Stypendium SGSCA i SAGT
+
+---
+
 Stypendium ufundowane przez Seattle-Gdynia Sister City Association (SGSCA)
 przyznawane dwójce uczniów co roku.
 
