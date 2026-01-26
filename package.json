@@ -1,9 +1,14 @@
 {
   "scripts": {
-    "dev": "shx rm -rf dist && hugo server",
-    "build": "shx rm -rf dist && hugo",
-    "clean": "shx rm -rf node_modules dist .hugo_build.lock",
-    "format": "prettier --write --ignore-unknown ."
+    "dev": "hugo server",
+    "build": "hugo",
+    "start": "serve dist",
+    "format": "prettier --write --ignore-unknown .",
+    "clean": "shx rm -rf node_modules dist .hugo_build.lock hugo_stats.json resources",
+    "//": "",
+    "clean:hugo": "shx rm -rf dist .hugo_build.lock hugo_stats.json resources",
+    "predev": "npm run clean:hugo",
+    "prebuild": "npm run clean:hugo"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
@@ -11,6 +16,8 @@
     "prettier": "^3.6.2",
     "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-tailwindcss": "^0.6.14",
+    "serve": "^14.2.5",
+    "sharp": "^0.34.5",
     "shx": "^0.4.0",
     "tailwindcss": "^4.1.18"
   }
