@@ -7,13 +7,7 @@
   <section
     class="relative container grid grid-cols-1 gap-x-10 gap-y-20 lg:grid-cols-2 lg:gap-y-40"
   >
-    {{ partial "footer/form.html" . }}
-    {{ partial "footer/contact.html" . }}
     {{ partial "footer/social.html" . }}
-
-    {{ with resources.Get "svg/paths/map.svg" }}
-      {{ .Content | safeHTML }}
-    {{ end }}
-
+    {{ partial "footer/contact.html" . }}
   </section>
 </footer>
