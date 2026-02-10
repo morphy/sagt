@@ -48,7 +48,7 @@
 {{ $verticalAlign := "justify-start" }}
 {{ $textAlign := "text-justify" }}
 
-{{ if .shortText }}
+{{ if .data.shortText }}
   {{ $verticalAlign = "justify-center" }}
   {{ $textAlign = "text-center" }}
 {{ end }}
