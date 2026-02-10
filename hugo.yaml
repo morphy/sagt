@@ -2,6 +2,11 @@ baseURL: https://sagt.com.pl/
 title: SAGT
 defaultContentLanguage: pl
 
+params:
+  longTitle: Stowarzyszenie Absolwentów<br/>Gdyńskiej Trójki
+  logo: img/logo.png
+  paypal: "https://paypal.com"
+
 publishDir: dist
 
 languages:

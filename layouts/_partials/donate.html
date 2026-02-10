@@ -29,7 +29,7 @@
       <div class="mb-5 flex flex-wrap items-center gap-5">
         {{ partial "button.html" (dict
           "type" "blue"
-          "href" "#"
+          "href" site.Params.paypal
           "text" "PayPal"
           "icon" "svg/icons/paypal-logo.svg"
           )
@@ -37,14 +37,14 @@
 
         {{ partial "button.html" (dict
           "type" "yellow"
-          "href" "#"
-          "text" "1% podatku"
+          "href" (printf "#%s" (i18n "contactHeaderId"))
+          "text" "1,5% podatku"
           )
         }}
 
         {{ partial "button.html" (dict
           "type" "blue"
-          "href" "#"
+          "href" (printf "#%s" (i18n "contactHeaderId"))
           "text" "Przelew"
           "icon" "svg/icons/bank.svg"
           )
