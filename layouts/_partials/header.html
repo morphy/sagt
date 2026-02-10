@@ -1,35 +1,34 @@
 <header class="fixed top-0 z-20 w-full bg-slate-900">
-  <div class="container flex items-center justify-between gap-8 py-5">
-    <a class="mr-auto flex items-center gap-6 lg:mr-0" href="/">
-      {{ with resources.Get "img/sagt-logo.png" }}
+  <div
+    class="container flex flex-wrap items-center justify-between gap-8 py-5 lg:flex-nowrap"
+  >
+    <a
+      class="order-1 mr-auto flex shrink-0 items-center gap-6 lg:mr-0"
+      href="/"
+    >
+      {{ with resources.Get site.Params.logo }}
         <img class="size-16" src="{{ .RelPermalink }}" alt="Logo SAGT" />
       {{ end }}
 
 
       <span class="hidden text-center text-white 2xl:inline">
-        Stowarzyszenie Absolwentów<br />Gdyńskiej Trójki
+        {{ site.Params.longTitle | safeHTML }}
       </span>
     </a>
 
-    <nav class="hidden lg:block">
-      {{ partial "header/menu.html" (dict "menuID" "main" "page" .) }}
-    </nav>
-
     <nav
-      class="absolute top-full right-0 left-0 hidden bg-slate-900 py-10 lg:hidden"
-      id="mobileMenu"
+      class="order-5 hidden basis-full lg:order-2 lg:block lg:basis-auto"
+      id="menu"
     >
-      <div class="container">
-        {{ partial "header/menu.html" (dict "menuID" "main" "page" .) }}
-      </div>
+      {{ partial "header/menu.html" (dict "menuID" "main" "page" .) }}
     </nav>
 
     {{ partial "header/languageMenu.html" . }}
 
 
     <button
-      class="w-10 cursor-pointer text-white lg:hidden"
-      id="mobileMenuButton"
+      class="order-4 w-10 cursor-pointer text-white lg:hidden"
+      id="menuButton"
     >
       {{ with resources.Get "svg/icons/list.svg" }}
         {{ .Content | safeHTML }}

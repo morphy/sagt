@@ -2,7 +2,7 @@
 {{ $menuID := .menuID }}
 
 {{ with index site.Menus $menuID }}
-  <ul class="flex flex-col gap-8 lg:flex-row">
+  <ul class="flex flex-col gap-8 py-8 lg:flex-row lg:py-0 lg:text-center">
     {{ partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
   </ul>
 {{ end }}

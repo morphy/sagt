@@ -1,7 +1,7 @@
 import languageMenu from "./languageMenu";
-import mobileMenu from "./mobileMenu";
+import menu from "./menu";
 
 document.addEventListener("DOMContentLoaded", () => {
   languageMenu();
-  mobileMenu();
+  menu();
 });
