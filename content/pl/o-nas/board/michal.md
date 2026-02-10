@@ -1,24 +1,16 @@
 ---
-img: img/board/remigiusz.jpg
+img: img/board/michal.jpg
 ---
 
 ### Michał Curyło
 
 ---
 
-#### Człowiek
+#### Członek zarządu
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
-et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
-dolore te feugait nulla facilisi.
-
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-eu feugiat nulla facilisis.
+Do Stowarzyszenia Absolwentów III LO w Gdyni dołączyłem w 2020 roku, po
+ukończeniu III LO w 2018 roku. W ramach działalności w SAGT największą
+satysfakcję daje mi możliwość dokładania własnej cegiełki do ciągłego
+zacieśniania społeczności absolwentów oraz realne efekty wsparcia uczniów
+poprzez programy mentoringowe i stażowe. Prywatnie interesuję się alpinizmem i
+wspinaczką, które uczą mnie wytrwałości i konsekwencji w dążeniu do celu.

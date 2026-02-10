@@ -1,35 +1,32 @@
-- title: Stachu Jones
-  text: "Czarodziej, Arcymag"
+- title: Oskar Kotela
+  #text: "Rok matury: ----"
 
-- title: Zbigniew Stonoga
-  text: Rzecznik prasowy
+- title: Natalia Dulek
+  text: "Rok matury: 2022"
 
-- title: Hymel Jadwiga
-  text: Dyspozytor pożarowy
+- title: Kinga Rydzewska
+  text: "Rok matury: 2018"
 
-- title: Karol Nawrocki
-  text: to strona publiczna więc nie mogę napisać
+- title: Jan Górecki
+  text: "Rok matury: 2023"
 
-- title: Jezus Chrystus
-  text: Syn Boży
+- title: Michał Curyło
+  text: "Rok matury: 2018"
 
-- title: Grażyna Żarko
-  text: Edukator religijny
+- title: Julia Chudycz
+  text: "Rok matury: 2022"
 
-- title: Edward Rydz-Śmigły
-  text: Dowódca plutonu
+- title: Remigiusz Piwowarski
+  text: "Rok matury: 2005"
 
-- title: A
-  text: Pierwsza litera
+- title: Sandra Andraszewicz
+  text: "Rok matury: 2005"
 
-- title: B
-  text: Druga litera
+- title: Łukasz Targoszyński
+  text: "Rok matury: 2005"
 
-- title: SZ
-  text: Nie ma takiej litery
-
-- title: Chcesz dołączyć do SAGT?
+- cta: true
+  title: Chcesz dołączyć do SAGT?
   text: Pomóż nam kreować Społeczność Absolwentów Gdyńskiej Trójki!
-  cta: true
-  link: Dołącz do nas
-  href: link.pl
+  link: Napisz do nas
+  href: "#kontakt"

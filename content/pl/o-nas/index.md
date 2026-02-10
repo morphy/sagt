@@ -14,8 +14,8 @@ sections:
     title: Założyciele
     data:
       - board/lukasz.md
-      - board/sandra.md
       - board/remigiusz.md
+      - board/sandra.md
       - board/michal.md
       - board/julia.md
 
