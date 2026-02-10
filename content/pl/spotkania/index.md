@@ -4,7 +4,7 @@ img: img/gallery/gallery-08.jpg
 
 menus:
   main:
-    weight: 50
+    weight: 60
 
 sections:
   - type: calendar

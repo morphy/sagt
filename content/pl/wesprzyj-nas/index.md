@@ -4,7 +4,7 @@ img: img/hands.jpg
 
 menus:
   main:
-    weight: 60
+    weight: 70
 
 sections:
   - type: small-cards

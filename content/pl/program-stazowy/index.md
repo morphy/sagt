@@ -6,7 +6,7 @@ text: texts/poznanski.md
 
 menus:
   main:
-    weight: 70
+    weight: 50
 
 sections:
   - type: large-cardsDISABLE
